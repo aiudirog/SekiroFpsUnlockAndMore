@@ -8,8 +8,8 @@ on:
 jobs:
 
   build:
-    name: Flake8
-    runs-on: ubuntu-latest
+    name: Build
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3.0.2
       - name: Add msbuild to PATH
