@@ -1,0 +1,18 @@
+name: build
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+
+  build:
+    name: Flake8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+      - name: Build
+        run: msbuild
