@@ -315,7 +315,7 @@ namespace SekiroFpsUnlockAndMore
             int gameIndex = -1;
             for (int i = 0; i < procList.Length; i++)
             {
-                if (procList[i].MainWindowTitle != GameData.PROCESS_TITLE || !procList[i].MainModule.FileVersionInfo.FileDescription.Contains(GameData.PROCESS_DESCRIPTION))
+                if (!procList[i].MainModule.FileVersionInfo.FileDescription.Contains(GameData.PROCESS_DESCRIPTION))
                     continue;
                 gameIndex = i;
                 break;
